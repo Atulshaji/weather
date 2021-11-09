@@ -1,4 +1,5 @@
 body{
+    height: fit-content;
     background: url(./Severe-Weather-Blog-1-1.jpg); background-size: cover;
 }
 input{
