@@ -11,8 +11,8 @@
 </head>
 <style>
     body{
-    height:1000px;
-    background: url(./Severe-Weather-Blog-1-1.jpg); background-size: cover;
+    height: 647px;
+    background: url(./dark-weather-4.jpg); background-size: cover;
 }
 
 </style>
@@ -51,16 +51,15 @@
         let wind_speed = data["wind"].speed
         let weather_type = data["weather"][0].main
         let html_data=  `<p style="color: beige; margin-top: 3%; font-family: cursive; font-size:60px;">${temperature}°C </p>
-                <div class="card" style="width: 15rem;font-size:18px; font-family:fantasy;">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${location_name.toUpperCase()}</li>
-    <li class="list-group-item">${weather_type}</li>
-    <li class="list-group-item">Wind Speed :${wind_speed} kmph</li>
-    <li class="list-group-item">Temperature : ${temperature}°C</li>
-
-  </ul>
+                <div style="width: 15rem;font-size:18px; font-family:fantasy;color:white">
   
-</div> <br><img src="./pinpng.com-fluffy-clouds-png-6885890.png"alt="" width="50px" height="25px">`
+    <p>${location_name.toUpperCase()}</p>
+        <p>${weather_type}</p>
+            <p>Wind Speed :${wind_speed} kmph</p>
+                <p>Temperature : ${temperature}°C</p>
+  
+</div>
+<img src="./pinpng.com-fluffy-clouds-png-6885890.png"alt="" width="50px" height="25px">`
                 
        
         document.querySelector("#result").innerHTML=html_data
