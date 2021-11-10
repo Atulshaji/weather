@@ -18,7 +18,7 @@
 </style>
 <body>
     
-    <div class="container">
+    <div>
         <h1 style="text-align: center; color: whitesmoke; font-family:initial; background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 32%, rgba(0,212,255,1) 100%);" >WEATHER DETAILS </h1>
 
@@ -34,11 +34,8 @@
                 <button onclick="fetchWeather()" class="btn btn-success" style="font-size: 100%;  height: 40px; text-align:center;" >fetch</button>
             </div>
         </div>
-           <center><div class="col-6" id="result"></di></center> 
+          <center><div id="result"></div></center> 
     </div>
-
-
-
 
 
 
@@ -53,16 +50,17 @@
         let temperature = data["main"].temp
         let wind_speed = data["wind"].speed
         let weather_type = data["weather"][0].main
-        let html_data=  `<p style="color: beige; margin-top: 10%; font-family: cursive; font-size:60px;">${temperature}°C</p>
-                <div class="card" style="width: 15rem;font-size:18px; font-family:fantasy">
-  <ul class="list-group list-group-flush" >
+        let html_data=  `<p style="color: beige; margin-top: 3%; font-family: cursive; font-size:60px;">${temperature}°C </p>
+                <div class="card" style="width: 15rem;font-size:18px; font-family:fantasy;">
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">${location_name.toUpperCase()}</li>
     <li class="list-group-item">${weather_type}</li>
     <li class="list-group-item">Wind Speed :${wind_speed} kmph</li>
     <li class="list-group-item">Temperature : ${temperature}°C</li>
 
   </ul>
-</div>`
+  
+</div> <br><img src="./pinpng.com-fluffy-clouds-png-6885890.png"alt="" width="50px" height="25px">`
                 
        
         document.querySelector("#result").innerHTML=html_data
